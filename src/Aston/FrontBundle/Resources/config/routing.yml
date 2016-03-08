@@ -21,3 +21,15 @@ aston_front_blog:
 aston_front_contact:
     path:   /contact
     defaults: { _controller: AstonFrontBundle:Default:contact }
+
+# Sessions
+
+# Ecriture
+aston_front_sesswrite:
+    path:   /sess/write
+    defaults: { _controller: AstonFrontBundle:Default:sessionWrite }
+
+# Lecture
+aston_front_sessread:
+    path:   /sess/read
+    defaults: { _controller: AstonFrontBundle:Default:sessionRead }

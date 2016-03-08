@@ -1,5 +1,65 @@
 {% extends 'layout.html.twig' %}
 
 {% block body %}
-    contact
+
+    <p>
+        Want to get in touch with me?
+        Fill out the form below to send me a message and
+        I will try to get back to you within 24 hours!
+    </p>
+
+    {{ form_start(form, {'attr': {'novalidate': 'novalidate'} } ) }}
+
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name, { 'attr': {'placeholder': form.name.vars.name|capitalize, 'class': 'form-control'} }) }}
+            <p class="help-block text-danger">
+            {% for error in form.name.vars.errors %}<p>{{ error.message }}</p>{% endfor %}
+            </p>
+        </div>
+    </div>
+
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            {{ form_label(form.email) }}
+            {{ form_widget(
+                form.email, { 'attr': {'placeholder': form.email.vars.name|capitalize, 'class': 'form-control' } }
+            ) }}
+            <p class="help-block text-danger">
+            {% for error in form.email.vars.errors %}<p>{{ error.message }}</p>{% endfor %}
+            </p>
+        </div>
+    </div>
+
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            {{ form_label(form.phone) }}
+            {{ form_widget(form.phone) }}
+            <p class="help-block text-danger">
+            {% for error in form.phone.vars.errors %}<p>{{ error.message }}</p>{% endfor %}
+            </p>
+        </div>
+    </div>
+
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+            {{ form_label(form.message) }}
+            {{ form_widget(form.message, { 'attr': {'placeholder': form.message.vars.name|capitalize, 'rows': 5, 'class': 'form-control' } }) }}
+            <p class="help-block text-danger">
+            {% for error in form.message.vars.errors %}<p>{{ error.message }}</p>{% endfor %}
+            </p>
+        </div>
+    </div>
+
+    <br>
+    <div id="success"></div>
+
+    <div class="row">
+        <div class="form-group col-xs-12">
+            {{ form_widget(form.send, {'label': 'Envoyer', 'attr': { 'class': 'btn btn-default' } }) }}
+        </div>
+    </div>
+    {{ form_end(form) }}
+
 {% endblock %}
