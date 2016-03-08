@@ -20,4 +20,19 @@ class DefaultController extends Controller
 
         // return new Response("<h1>Hello $name</h1>");
     }
+
+    public function aboutAction()
+    {
+        return $this->render('AstonFrontBundle:Default:about.html.twig');
+    }
+
+    public function blogAction()
+    {
+        return $this->render('AstonFrontBundle:Default:blog.html.twig');
+    }
+
+    public function contactAction()
+    {
+        return $this->render('AstonFrontBundle:Default:contact.html.twig');
+    }
 }

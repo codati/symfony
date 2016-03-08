@@ -8,3 +8,16 @@ aston_front_hello:
     methods: [GET,POST]
     requirements:
         name: "[a-z]+"
+
+# Routes comments
+aston_front_about:
+    path:   /about
+    defaults: { _controller: AstonFrontBundle:Default:about }
+
+aston_front_blog:
+    path:   /blog
+    defaults: { _controller: AstonFrontBundle:Default:blog }
+
+aston_front_contact:
+    path:   /contact
+    defaults: { _controller: AstonFrontBundle:Default:contact }
