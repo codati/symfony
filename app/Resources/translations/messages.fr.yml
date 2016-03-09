@@ -1,0 +1,13 @@
+## app/Resources/translations/messages.fr.yml
+
+un message: Bonjour Le Monde
+
+nav:
+    home: Accueil
+    about: A propos
+    blog: Blog
+    contact: Contact
+
+app:
+    hello: Bonjour
+    phone: Téléphone

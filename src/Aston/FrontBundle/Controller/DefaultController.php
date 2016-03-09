@@ -41,19 +41,19 @@ class DefaultController extends Controller
     {
         // Déclaration de mon formulaire
         $form = $this->createFormBuilder(new Contact())
-                ->add('name')
-                ->add('email', EmailType::class)
+                ->add('name', null, ['label' => 'app.name'])
+                ->add('email', EmailType::class, ['label' => 'app.email'])
                 ->add('phone', null, [
                     'required' => false,
+                    'label' => 'app.phone',
                     'attr' => [
-                            'id' => 'form_hello',
-                            'placeholder' => 'Phone',
+                            'placeholder' => 'app.phone',
                             'class' => 'form-control',
                         ],
                     ]
                 )
-                ->add('message', TextareaType::class)
-                ->add('send', SubmitType::class)
+                ->add('message', TextareaType::class, ['label' => 'app.message'])
+                ->add('send', SubmitType::class, ['label' => 'app.send'])
                 ->getForm();
 
         // Validation du formulaire

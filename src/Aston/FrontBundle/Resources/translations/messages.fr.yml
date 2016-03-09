@@ -1,0 +1,7 @@
+# src/Aston/FrontBundle/Resources/translations/messages.fr.yml
+
+app:
+    name: nom
+    email: email
+    message: message
+    send: envoyer

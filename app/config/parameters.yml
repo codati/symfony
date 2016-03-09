@@ -2,7 +2,7 @@
 parameters:
 
     # Custom
-    locale: en
+    locale: fr
     company: Aston
 
     # Default Symfony parameters
