@@ -1,0 +1,5 @@
+# src/Aston/BackBundle/Resources/config/routing.yml
+
+aston_back_homepage:
+    path:     /
+    defaults: { _controller: AstonBackBundle:Default:index }

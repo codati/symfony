@@ -1,0 +1,5 @@
+# src/Aston/BackBundle/Resources/translations/messages.fr.yml
+
+admin:
+    blog:
+        add: Ajouter un article
